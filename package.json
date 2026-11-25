@@ -1,0 +1,12 @@
+{
+  "name": "publishing-website",
+  "private": true,
+  "workspaces": ["apps/web", "apps/api"],
+  "scripts": {
+    "dev": "npm run dev --workspace @publishing/web",
+    "dev:api": "npm run dev --workspace @publishing/api",
+    "db:setup": "npm run db:setup --workspace @publishing/api",
+    "build": "npm run build --workspaces",
+    "preview": "npm run preview --workspace @publishing/web"
+  }
+}
